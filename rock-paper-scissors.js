@@ -6,16 +6,12 @@
 
 function getComputerChoice() {
     let computerResult = Math.random();
-    console.log(computerResult);
     if (computerResult <= 0.33) {
         computerResult = "rock";
-        console.log(computerResult);
     } else if (computerResult >0.33 && computerResult <= 0.66) {
         computerResult = "paper";
-        console.log(computerResult);
     } else {
         computerResult = "scissors";
-        console.log(computerResult);
     }
     return computerResult;
 }
@@ -24,37 +20,42 @@ const computerChoice = getComputerChoice();
     
 // user is prompted to type (make it not case sensitive) one of the three options
 
-const userChoice = prompt('Select Rock, Paper, or Scissors').toLowerCase();
-
-console.log(userChoice);
+// const userChoice = prompt('Select Rock, Paper, or Scissors').toLowerCase();
 
 // program compares the two chosen values made by computer and user and a winner is chosen (implied this is where we tell the program conditions of victory [rock beats scissor, scissors beats paper, paper beats rock], no points awarded for a tie).
 // user is met with a statement of winning or losing the round
 
 let roundResult;
 
-if (userChoice == 'rock' && computerChoice == 'rock'){
-    roundResult =  'You both picked rock, its a tie!';
-} else if (userChoice == 'rock' && computerChoice == 'paper') {
-    roundResult =  'Paper beats rock, you lose!';
-} else if (userChoice == 'rock' && computerChoice == 'scissors') {
-    roundResult =  'Rock beats scissors, you win!';
-} else if (userChoice == 'paper' && computerChoice == 'rock') {
-    roundResult =  'Paper beats rock, you win!';
-} else if (userChoice == 'paper' && computerChoice == 'paper') {
-    roundResult =  'You both picked paper, its a tie!';
-} else if (userChoice == 'paper' && computerChoice == 'scissors') {
-    roundResult =  'Scissors beats paper, you lose!';
-} else if (userChoice == 'scissors' && computerChoice == 'rock') {
-    roundResult =  'Rock beats scissors, you lose!';
-} else if (userChoice == 'scissors' && computerChoice == 'paper') {
-    roundResult =  'Scissors beats paper, you win!';
-} else if (userChoice == 'scissors' && computerChoice == 'scissors') {
-    roundResult =  'You both picked scissors, its a tie!';
-} else {
-    roundResult = 'invalid input, reload page and try again';
+function playRound(userChoice, computerChoice) {
+    if (userChoice == 'rock' && computerChoice == 'rock') {
+        roundResult =  'You both picked rock, its a tie!';
+    } else if (userChoice == 'rock' && computerChoice == 'paper') {
+        roundResult =  'Paper beats rock, you lose!';
+    } else if (userChoice == 'rock' && computerChoice == 'scissors') {
+        roundResult =  'Rock beats scissors, you win!';
+    } else if (userChoice == 'paper' && computerChoice == 'rock') {
+        roundResult =  'Paper beats rock, you win!';
+    } else if (userChoice == 'paper' && computerChoice == 'paper') {
+        roundResult =  'You both picked paper, its a tie!';
+    } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+        roundResult =  'Scissors beats paper, you lose!';
+    } else if (userChoice == 'scissors' && computerChoice == 'rock') {
+        roundResult =  'Rock beats scissors, you lose!';
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+        roundResult =  'Scissors beats paper, you win!';
+    } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
+        roundResult =  'You both picked scissors, its a tie!';
+    } else {
+        roundResult = 'invalid input, reload page and try again';
+        return roundResult;
+    }
 }
 
+function startRound() {
+    playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), computerChoice);
+    return roundResult;
+}
 console.log(roundResult);
 
 // running total of the series updated
