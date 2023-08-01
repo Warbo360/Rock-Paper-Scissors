@@ -1,26 +1,32 @@
 // prompt user to begin game/round with enter click (for later!)
+
 // For now will keep in browser as a prompt to being to start game
 
 // computer rando picks one of the three options
 
 function getComputerChoice() {
-    let result = Math.random();
-    console.log(result);
-    if (result <= 0.33) {
-        result = "rock";
-        console.log(result);
-    } else if (result >0.33 && result <= 0.66) {
-        result = "paper";
-        console.log(result);
+    let computerResult = Math.random();
+    console.log(computerResult);
+    if (computerResult <= 0.33) {
+        computerResult = "rock";
+        console.log(computerResult);
+    } else if (computerResult >0.33 && computerResult <= 0.66) {
+        computerResult = "paper";
+        console.log(computerResult);
     } else {
-        result = "scissors";
-        console.log(result);
+        computerResult = "scissors";
+        console.log(computerResult);
     }
-    return result;
+    return computerResult;
 }
-    
 
+const computerChoice = getComputerChoice();
+    
 // user is prompted to type (make it not case sensitive) one of the three options
+
+const userChoice = prompt('Select Rock, Paper, or Scissors').toLowerCase();
+
+console.log(userChoice);
 
 // program compares the two chosen values made by computer and user and a winner is chosen (implied this is where we tell the program conditions of victory [rock beats scissor, scissors beats paper, paper beats rock], no points awarded for a tie).
       
