@@ -16,7 +16,7 @@ function getComputerChoice() {
     return computerResult;
 }
 
-const computerChoice = getComputerChoice();
+// const computerChoice = getComputerChoice();
     
 // user is prompted to type (make it not case sensitive) one of the three options
 
@@ -53,7 +53,7 @@ function playRound(userChoice, computerChoice) {
 }
 
 function startRound() {
-    playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), computerChoice);
+    playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), getComputerChoice());
     return roundResult;
 }
 console.log(roundResult);
