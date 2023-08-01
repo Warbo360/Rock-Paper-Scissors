@@ -31,27 +31,31 @@ console.log(userChoice);
 // program compares the two chosen values made by computer and user and a winner is chosen (implied this is where we tell the program conditions of victory [rock beats scissor, scissors beats paper, paper beats rock], no points awarded for a tie).
 // user is met with a statement of winning or losing the round
 
+let roundResult;
+
 if (userChoice == 'rock' && computerChoice == 'rock'){
-    console.log( 'You both picked rock, its a tie!');
+    roundResult =  'You both picked rock, its a tie!';
 } else if (userChoice == 'rock' && computerChoice == 'paper') {
-    console.log( 'Paper beats rock, you lose!');
+    roundResult =  'Paper beats rock, you lose!';
 } else if (userChoice == 'rock' && computerChoice == 'scissors') {
-    console.log( 'Rock beats scissors, you win!');
+    roundResult =  'Rock beats scissors, you win!';
 } else if (userChoice == 'paper' && computerChoice == 'rock') {
-    console.log( 'Paper beats rock, you win!');
+    roundResult =  'Paper beats rock, you win!';
 } else if (userChoice == 'paper' && computerChoice == 'paper') {
-    console.log( 'You both picked paper, its a tie!');
+    roundResult =  'You both picked paper, its a tie!';
 } else if (userChoice == 'paper' && computerChoice == 'scissors') {
-    console.log( 'Scissors beats paper, you lose!');
+    roundResult =  'Scissors beats paper, you lose!';
 } else if (userChoice == 'scissors' && computerChoice == 'rock') {
-    console.log( 'Rock beats scissors, you lose!');
+    roundResult =  'Rock beats scissors, you lose!';
 } else if (userChoice == 'scissors' && computerChoice == 'paper') {
-    console.log( 'Scissors beats paper, you win!');
+    roundResult =  'Scissors beats paper, you win!';
 } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
-    console.log( 'You both picked scissors, its a tie!');
+    roundResult =  'You both picked scissors, its a tie!';
 } else {
-    console.log('invalid input, reload page and try again');
+    roundResult = 'invalid input, reload page and try again';
 }
+
+console.log(roundResult);
 
 // running total of the series updated
 
