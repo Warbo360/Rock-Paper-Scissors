@@ -48,12 +48,14 @@ function playRound(userChoice, computerChoice) {
         roundResult =  'You both picked scissors, its a tie!';
     } else {
         roundResult = 'invalid input, reload page and try again';
-        return roundResult;
-    } return roundResult;
+    }
 }
+
+// Function calling the playRound() function and seriesScore() function
 
 function startRound() {
     playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), getComputerChoice());
+    console.log(roundResult);
     seriesScore(roundResult);
 }
 
@@ -65,14 +67,11 @@ function seriesScore(roundResult) {
     if (roundResult == 'Rock beats scissors, you win!' || roundResult == 'Paper beats rock, you win!' || roundResult == 'Scissors beats paper, you win!') {
         ++ userScore;
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
-        return userScore, computerScore;
     } else if (roundResult == 'Paper beats rock, you lose!' || roundResult == 'Scissors beats paper, you lose!' || roundResult == 'Rock beats scissors, you lose!') {
         ++ computerScore;
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
-        return userScore, computerScore;
     } else {
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
-        return userScore, computerScore;
     }
 
 }
