@@ -79,7 +79,21 @@ function seriesScore(roundResult) {
 
 // loop the program for best of 9 series
 
+    // function startSeries() {
+    //     if (userScore == 5) {
+    //         console.log('You have bested the machines and saved us all!');
+    //     } else if (computerScore == 5) {
+    //         console.log('\"Assuming direct control\"');
+    //     } else {
+    //         startRound();
+    //     }
+    // }
+
+// This function in use for now until I can learn to loop the startRound() function for a full series where the end result is either the computer or user winning 5 total games; 
+
 function startSeries() {
+    userScore = 0;
+    computerScore = 0;
     startRound();
     startRound();
     startRound();
@@ -89,7 +103,7 @@ function startSeries() {
     startRound();
     startRound();
     startRound();
-    if (userScore == 5) {
+    if (userScore > computerScore) {
         console.log('Congrats you have defeated the computer!');
     } else {
         console.log('The computers are taking over and you have failed us!');
