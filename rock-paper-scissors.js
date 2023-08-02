@@ -103,7 +103,7 @@
         startRound();
         startRound();
 
-// after condition of user or computer winning five rounds of the loop user to be met with statement of winning or losing the series (just currently set to who has a greater score until I can figure out how to loop the function until someone wins 5 games)
+    // after condition of user or computer winning five rounds of the loop user to be met with statement of winning or losing the series (just currently set to who has a greater score until I can figure out how to loop the function until someone wins 5 games)
 
         if (userScore > computerScore) {
             console.log('Congrats you have defeated the computer!');
