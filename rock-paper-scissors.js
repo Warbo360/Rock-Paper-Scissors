@@ -49,16 +49,33 @@ function playRound(userChoice, computerChoice) {
     } else {
         roundResult = 'invalid input, reload page and try again';
         return roundResult;
-    }
+    } return roundResult;
 }
 
 function startRound() {
     playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), getComputerChoice());
-    return roundResult;
+    seriesScore(roundResult);
 }
-console.log(roundResult);
 
 // running total of the series updated
+
+function seriesScore(roundResult) {
+    let userScore = 0;
+    let computerScore = 0;
+    if (roundResult == 'Rock beats scissors, you win!' || roundResult == 'Paper beats rock, you win!' || roundResult == 'Scissors beats paper, you win!') {
+        ++ userScore;
+        console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+        return userScore, computerScore;
+    } else if (roundResult == 'Paper beats rock, you lose!' || roundResult == 'Scissors beats paper, you lose!' || roundResult == 'Rock beats scissors, you lose!') {
+        ++ computerScore;
+        console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+        return userScore, computerScore;
+    } else {
+        console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+        return userScore, computerScore;
+    }
+
+}
 
 // loop the program for best of 9 series
 
