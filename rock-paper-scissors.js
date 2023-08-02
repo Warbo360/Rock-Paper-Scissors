@@ -4,6 +4,9 @@
 
 // computer rando picks one of the three options
 
+let userScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let computerResult = Math.random();
     if (computerResult <= 0.33) {
@@ -62,21 +65,36 @@ function startRound() {
 // running total of the series updated
 
 function seriesScore(roundResult) {
-    let userScore = 0;
-    let computerScore = 0;
     if (roundResult == 'Rock beats scissors, you win!' || roundResult == 'Paper beats rock, you win!' || roundResult == 'Scissors beats paper, you win!') {
-        ++ userScore;
+        userScore = 1 + userScore;
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
     } else if (roundResult == 'Paper beats rock, you lose!' || roundResult == 'Scissors beats paper, you lose!' || roundResult == 'Rock beats scissors, you lose!') {
-        ++ computerScore;
+        computerScore = 1 + computerScore;
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
     } else {
         console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
-    }
-
+    } 
+    return userScore, computerScore; 
 }
 
 // loop the program for best of 9 series
+
+function startSeries() {
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    startRound();
+    if (userScore == 5) {
+        console.log('Congrats you have defeated the computer!');
+    } else {
+        console.log('The computers are taking over and you have failed us!');
+    }
+}
 
 // after condition of user or computer winning five rounds of the loop user to be met with statement of winning or losing the series
 
