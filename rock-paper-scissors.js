@@ -1,11 +1,29 @@
 // prompt user to begin game/round with enter click (for later!)
 // For now will keep in browser as a prompt to being to start game
 
+// Event listener for the button options of rock, paper, scissors and inputs the player's choice + starts a round against the computer
+
+    const btn = document.querySelectorAll('.btn');
+    console.log(btn);
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function(e) {
+                console.log(e);
+                console.log(btn[i].innerText);
+                playerChoice = btn[i].innerText.toLowerCase();
+                startRound();
+            });
+        };
+    
+    function getPlayerChoice() {
+        return playerChoice;
+    }
+
 // Global variables used in functions
 
     let userScore = 0;
     let computerScore = 0;
     let roundResult;
+    let playerChoice
 
 // computer rando picks one of the three options
 
@@ -57,7 +75,7 @@
 // Function calling the playRound() function and seriesScore() function with inputs for the latter functions to prompt user when they want to start a game, and computer choice is not made until that time as well
 
     function startRound() {
-        playRound(prompt('Select Rock, Paper, or Scissors').toLowerCase(), getComputerChoice());
+        playRound(getPlayerChoice(), getComputerChoice());
         console.log(roundResult);
         seriesScore(roundResult);
     }
@@ -90,27 +108,27 @@
 
 // This function in use for now until I can learn to loop the startRound() function for a full series where the end result is either the computer or user winning 5 total games; 
 
-    function startSeries() {
-        userScore = 0;
-        computerScore = 0;
-        startRound();
-        startRound();
-        startRound();
-        startRound();
-        startRound();
-        startRound();
-        startRound();
-        startRound();
-        startRound();
+    // function startSeries() {
+    //     userScore = 0;
+    //     computerScore = 0;
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
+    //     startRound();
 
     // after condition of user or computer winning five rounds of the loop user to be met with statement of winning or losing the series (just currently set to who has a greater score until I can figure out how to loop the function until someone wins 5 games)
 
-        if (userScore > computerScore) {
-            console.log('Congrats you have defeated the computer!');
-        } else {
-            console.log('The computers are taking over and you have failed us!');
-        }
-    }
+    //     if (userScore > computerScore) {
+    //         console.log('Congrats you have defeated the computer!');
+    //     } else {
+    //         console.log('The computers are taking over and you have failed us!');
+    //     }
+    // }
 
 // prompt for user to start another series is given (also should be able to pick this option in the middle of a already running series to start a new series before the current is done)
 
