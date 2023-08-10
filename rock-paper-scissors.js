@@ -6,11 +6,9 @@
     const btn = document.querySelectorAll('.btn');
     console.log(btn);
         for (let i = 0; i < btn.length; i++) {
-            btn[i].addEventListener('click', function(e) {
-                console.log(e);
-                console.log(btn[i].innerText);
+            btn[i].addEventListener('click', function() {
                 playerChoice = btn[i].innerText.toLowerCase();
-                startRound();
+                logSeries();
             });
         };
     
@@ -23,7 +21,7 @@
     let userScore = 0;
     let computerScore = 0;
     let roundResult;
-    let playerChoice
+    let playerChoice;
 
 // computer rando picks one of the three options
 
@@ -96,15 +94,22 @@
 
 // loop the program for best of 9 series (work in progress)
 
-    // function startSeries() {
-    //     if (userScore == 5) {
-    //         console.log('You have bested the machines and saved us all!');
-    //     } else if (computerScore == 5) {
-    //         console.log('\"Assuming direct control\"');
-    //     } else {
-    //         startRound();
-    //     }
-    // }
+    function logSeries() {
+        startRound();
+        if (userScore === 5) {
+            console.log('Congrats you have defeated the computers and have saved us all!!');
+            computerScore = 0;
+            userScore = 0;
+        } else if (computerScore === 5) {
+            console.log('You have been defeated by the computers, now compute pi for the next 2000 years!')
+            computerScore = 0;
+            userScore = 0;
+        } else {
+            console.log('Click an option to continue')
+        }
+    };
+
+     
 
 // This function in use for now until I can learn to loop the startRound() function for a full series where the end result is either the computer or user winning 5 total games; 
 
