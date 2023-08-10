@@ -4,7 +4,6 @@
 // Event listener for the button options of rock, paper, scissors and inputs the player's choice + starts a round against the computer
 
     const btn = document.querySelectorAll('.btn');
-    console.log(btn);
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener('click', function() {
                 playerChoice = btn[i].innerText.toLowerCase();
