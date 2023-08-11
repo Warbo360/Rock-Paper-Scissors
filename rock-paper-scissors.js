@@ -163,14 +163,25 @@
 // running total of the series updated also tells user the score in the series
 
     function seriesScore(roundResult) {
+        const seriesInfo = document.querySelector('.series-info');
+        const score = document.createElement('p');
         if (roundResult == 'Rock beats scissors, you win!' || roundResult == 'Paper beats rock, you win!' || roundResult == 'Scissors beats paper, you win!') {
             userScore = 1 + userScore;
+            score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
             console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(score);
         } else if (roundResult == 'Paper beats rock, you lose!' || roundResult == 'Scissors beats paper, you lose!' || roundResult == 'Rock beats scissors, you lose!') {
             computerScore = 1 + computerScore;
+            score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
             console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(score);
         } else {
+            score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
             console.log('The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!');
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(score);
         } 
     }
 
