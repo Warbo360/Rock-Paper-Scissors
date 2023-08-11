@@ -189,16 +189,25 @@
 
     function logSeries() {
         startRound();
+        const seriesInfo = document.querySelector('.series-info');
+        const message = document.createElement('p');
         if (userScore === 5) {
             console.log('Congrats you have defeated the computers and have saved us all!!');
+            message.textContent = 'Congrats you have defeated the computers and have saved us all!!';
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(message);
             computerScore = 0;
             userScore = 0;
         } else if (computerScore === 5) {
-            console.log('You have been defeated by the computers, now compute pi for the next 2000 years!')
+            console.log('You have been defeated by the computers, now compute pi for the next 2000 years!');
+            message.textContent = 'You have been defeated by the computers, now compute pi for the next 2000 years!';
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(message);
             computerScore = 0;
             userScore = 0;
         } else {
             console.log('Click an option to continue')
+            seriesInfo.removeChild(message);
         }
     };
 
