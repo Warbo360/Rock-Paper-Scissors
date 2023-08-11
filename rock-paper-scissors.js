@@ -89,8 +89,62 @@
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Paper beats rock, you lose!') {
+            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Rock beats scissors, you win!') {
+            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Paper beats rock, you win!'){
+            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'You both picked paper, its a tie!') {
+            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Scissors beats paper, you lose!') {
+            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Rock beats scissors, you lose!') {
+            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else if (roundResult === 'Scissors beats paper, you win!') {
+            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
         } else {
-            return;
+            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
         }
         
     }
