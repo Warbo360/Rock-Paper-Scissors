@@ -1,11 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     text-align: center;
+    min-height: 100vh;
 }
 
 .header,
@@ -15,13 +17,23 @@ body {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
-    padding: 50px;
-    height: 125px;
+    padding: 100px;
+    height: 25vh;
+}
+
+.header {
+    background-color: #8c8c8c;
+}
+
+.round-info {
+    background-color: #C9462A;
+    color: #ffffff;
 }
 
 .header,
 .series-info {
     flex-direction: column;
+    font-size: 25px;
 }
 
 .round-info,
@@ -32,13 +44,12 @@ body {
 .computer-choice p,
 .player-choice p,
 .round-result p{
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .round-info img {
     height: 100px;
     width: 100px;
-    border: 2px black solid;
 }
 
 .btn-container div {
@@ -51,19 +62,10 @@ body {
 .btn-container img {
     height: 100px;
     width: 100px;
-    border: 2px black solid;
 }
 
 button {
     width: 100px;
-}
-
-.header {
-    border: 2px solid red;
-}
-
-.round-info {
-    border: 2px solid orange;
 }
 
 .round-result {
@@ -74,20 +76,21 @@ button {
 }
 
 .round-result .battlefield {
-    text-decoration: underline;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .player-choice,
 .computer-choice {
-    text-decoration: underline;
     font-weight: bold;
 }
 
-.btn-container {
-    border: 2px solid brown;
+.series-info {
+    font-weight: bold;
+    background-color: #C9462A;
+    color: #ffffff;
 }
 
-.series-info {
-    border: 2px solid magenta;
+.btn-container {
+    background-color: #8c8c8c;
 }
