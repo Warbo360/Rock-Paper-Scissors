@@ -68,6 +68,7 @@
             roundResult = 'invalid input, reload page and try again';
         }
     }
+    
 
 // Function calling the playRound() function and seriesScore() function with inputs for the latter functions to prompt user when they want to start a game, and computer choice is not made until that time as well
 
@@ -75,6 +76,23 @@
         playRound(getPlayerChoice(), getComputerChoice());
         console.log(roundResult);
         seriesScore(roundResult);
+        const computerChoiceDiv = document.querySelector('.computer-choice');
+        const playerChoiceDiv = document.querySelector('.player-choice'); 
+        const imgPlayer = document.createElement('img');
+        const imgComputer = document.createElement('img')
+        imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+        imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+        if (roundResult === 'You both picked rock, its a tie!') {  
+            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+        } else {
+            return;
+        }
+        
     }
 
 // running total of the series updated also tells user the score in the series
