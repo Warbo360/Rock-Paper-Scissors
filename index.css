@@ -29,6 +29,12 @@ body {
     align-items: center;
 }
 
+.computer-choice p,
+.player-choice p,
+.round-result p{
+    margin-bottom: 10px;
+}
+
 .round-info img {
     height: 100px;
     width: 100px;
@@ -39,6 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .btn-container img {
@@ -57,6 +64,24 @@ button {
 
 .round-info {
     border: 2px solid orange;
+}
+
+.round-result {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: -webkit-fill-available;
+}
+
+.round-result .battlefield {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.player-choice,
+.computer-choice {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .btn-container {

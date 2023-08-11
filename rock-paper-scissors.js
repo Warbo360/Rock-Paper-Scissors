@@ -78,73 +78,84 @@
         seriesScore(roundResult);
         const computerChoiceDiv = document.querySelector('.computer-choice');
         const playerChoiceDiv = document.querySelector('.player-choice'); 
+        const imBattleField = document.querySelector('.round-result');
+        const txtBattleField = document.createElement('p');
+        txtBattleField.classList.add('battle-txt');
         const imgPlayer = document.createElement('img');
-        const imgComputer = document.createElement('img')
-        imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
-        imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+        const imgComputer = document.createElement('img');
+        imBattleField.replaceChild(txtBattleField,imBattleField.lastElementChild);
         if (roundResult === 'You both picked rock, its a tie!') {  
-            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
-            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-fist-100.png");
+            imgComputer.src = ("./img/icons8-fist-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'You both picked rock, its a tie!';
         } else if (roundResult === 'Paper beats rock, you lose!') {
-            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
-            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-fist-100.png");
+            imgComputer.src = ("./img/icons8-hand-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Paper beats rock, you lose!';
         } else if (roundResult === 'Rock beats scissors, you win!') {
-            imgPlayer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
-            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-fist-100.png");
+            imgComputer.src = ("./img/icons8-hand-scissors-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Rock beats scissors, you win!';
         } else if (roundResult === 'Paper beats rock, you win!'){
-            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
-            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-100.png");
+            imgComputer.src = ("./img/icons8-fist-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Paper beats rock, you win!';
         } else if (roundResult === 'You both picked paper, its a tie!') {
-            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
-            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-100.png");
+            imgComputer.src = ("./img/icons8-hand-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'You both picked paper, its a tie!';
         } else if (roundResult === 'Scissors beats paper, you lose!') {
-            imgPlayer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
-            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-100.png");
+            imgComputer.src = ("./img/icons8-hand-scissors-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Scissors beats paper, you lose!';
         } else if (roundResult === 'Rock beats scissors, you lose!') {
-            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
-            imgComputer.src = ('./img/emile-guillemot-tfFWBhEACcQ-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-scissors-100.png");
+            imgComputer.src = ("./img/icons8-fist-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Rock beats scissors, you lose!';
         } else if (roundResult === 'Scissors beats paper, you win!') {
-            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
-            imgComputer.src = ('./img/richard-dykes-SPuHHjbSso8-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-scissors-100.png");
+            imgComputer.src = ("./img/icons8-hand-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'Scissors beats paper, you win!';
         } else {
-            imgPlayer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
-            imgComputer.src = ('./img/matt-artz-SmocKx2oDZc-unsplash.jpg');
+            imgPlayer.src = ("./img/icons8-hand-scissors-100.png");
+            imgComputer.src = ("./img/icons8-hand-scissors-100.png");
             playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
             computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'You both picked scissors, its a tie!';
         }
         
     }
