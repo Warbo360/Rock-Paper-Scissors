@@ -55,7 +55,7 @@ let playerChoice;
             roundResult =  'Scissors beats paper, you win!';
         } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
             roundResult =  'You both picked scissors, its a tie!';
-        } else if (userChoice == 'reset series') {
+        } else if (userChoice == 'reset') {
             roundResult = 'The battle has been reset';    
         } else {
             roundResult = 'invalid input, reload page and try again';
@@ -178,8 +178,8 @@ let playerChoice;
             seriesInfo.appendChild(score);
         } else if (roundResult == 'The battle has been reset') {
             userScore = 0;
-            computerScore = 0;
-            score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
+            computerScore =0;
+            score.textContent = 'The war has been reset';
             seriesInfo.removeChild(seriesInfo.lastElementChild);
             seriesInfo.appendChild(score);
         } else {
