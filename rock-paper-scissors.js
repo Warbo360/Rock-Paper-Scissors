@@ -55,6 +55,8 @@ let playerChoice;
             roundResult =  'Scissors beats paper, you win!';
         } else if (userChoice == 'scissors' && computerChoice == 'scissors') {
             roundResult =  'You both picked scissors, its a tie!';
+        } else if (userChoice == 'reset series') {
+            roundResult = 'The battle has been reset';    
         } else {
             roundResult = 'invalid input, reload page and try again';
         }
@@ -139,6 +141,14 @@ let playerChoice;
             playerChoiceDiv.appendChild(imgPlayer);
             computerChoiceDiv.appendChild(imgComputer);
             txtBattleField.textContent = 'Scissors beats paper, you win!';
+        } else if (roundResult === 'The battle has been reset') {
+            imgPlayer.src = ("./img/icons8-user-100.png");
+            imgComputer.src = ("./img/icons8-workstation-100.png");
+            playerChoiceDiv.removeChild(playerChoiceDiv.lastElementChild);
+            computerChoiceDiv.removeChild(computerChoiceDiv.lastElementChild);
+            playerChoiceDiv.appendChild(imgPlayer);
+            computerChoiceDiv.appendChild(imgComputer);
+            txtBattleField.textContent = 'The battle has been reset';
         } else {
             imgPlayer.src = ("./img/icons8-hand-scissors-100.png");
             imgComputer.src = ("./img/icons8-hand-scissors-100.png");
@@ -163,6 +173,12 @@ let playerChoice;
             seriesInfo.appendChild(score);
         } else if (roundResult == 'Paper beats rock, you lose!' || roundResult == 'Scissors beats paper, you lose!' || roundResult == 'Rock beats scissors, you lose!') {
             computerScore = 1 + computerScore;
+            score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
+            seriesInfo.removeChild(seriesInfo.lastElementChild);
+            seriesInfo.appendChild(score);
+        } else if (roundResult == 'The battle has been reset') {
+            userScore = 0;
+            computerScore = 0;
             score.textContent = 'The current score is ' + userScore + ' for the player, and ' + computerScore + ' for the computer!';
             seriesInfo.removeChild(seriesInfo.lastElementChild);
             seriesInfo.appendChild(score);
