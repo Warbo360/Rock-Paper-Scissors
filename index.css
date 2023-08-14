@@ -28,6 +28,7 @@ body {
 .round-info {
     background-color: #C9462A;
     color: #ffffff;
+    font-size: x-large;
 }
 
 .header,
@@ -72,7 +73,14 @@ button {
     display: flex; 
     flex-direction: column;
     justify-content: space-evenly;
-    height: -webkit-fill-available;
+    height: 175px;
+    width: 300px;
+    background-color: #8c8c8c;
+    padding: 10px;
+}
+
+.round-result img {
+    align-self: center;
 }
 
 .round-result .battlefield {
