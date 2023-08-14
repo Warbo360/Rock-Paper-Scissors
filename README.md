@@ -24,3 +24,14 @@ A Rock-Paper-Scissors game following the curriculum offered by The Odin Project,
     1-2d. User is propmted with a winning or losing statement for the series overall that is unique from the statement given in 1-1e which is for an individual round.
 
     1-2e. A prompt for the user to start another best of nine series again.
+
+
+Image Credits
+
+<a target="_blank" href="https://icons8.com/icon/23265/user">User</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/41456/hand-scissors">Hand Scissors</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/10266/clenched-fist">Fist</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/10272/hand">Hand</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/7744/decision">Decision</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/59341/battle">Crossed Swords</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/12494/reset">Reset</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
