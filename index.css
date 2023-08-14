@@ -92,7 +92,7 @@ button:hover {
     background-color: #8c8c8c;
     padding: 20px;
     border-radius: 4px;
-    border: ridge 10px #000000;
+    border: ridge 10px #8c8c8c;
 }
 
 .round-result img {
@@ -122,7 +122,7 @@ button:hover {
     background-color: #000000;
     padding: 10px;
     border-radius: 4px;
-    border:  ridge 10px #ffffff;
+    border: ridge 10px #000000;
     
 }
 
